@@ -1,0 +1,12 @@
+{
+  "name": "xmlq",
+  "version": "0.0.0-dev",
+  "description": "",
+  "main": "index.js",
+  "author": "woodenfish <mr.muzea@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "xml-js": "^1.6.8"
+  }
+}
