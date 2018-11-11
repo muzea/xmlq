@@ -15,26 +15,12 @@ const Combinators = [
   CHILD,
 ];
 
-/**
- * 
- * 
- * 
- * input:  'tagA tagB'
- * output: ['tagA', 'tagB']
- * 
- * input:  'tagA + tagB'
- * output: ['tagA', '+', 'tagB']
- * 
- * input:  'tagA+tagB'
- * output: ['tagA', '+', 'tagB']
- * 
- * input:  'tagA > tagB'
- * output: ['tagA', '>', 'tagB']
- * 
- * input:  'tagA>tagB'
- * output: ['tagA', '>', 'tagB']
- */
-function token(input) {
+const Combinator = {
+  ADJACENT_SIBLING,
+  CHILD,
+}
+
+function token(input: string): string[] {
   const ret = [];
   const length = input.length;
   let start = 0;
@@ -68,13 +54,8 @@ function token(input) {
   return ret;
 }
 
-const inputList = [
-  'tagA tagB',
-  'tagA + tagB',
-  'tagA+tagB',
-  'tagA > tagB',
-  'tagA>tagB',
-]
-
-inputList.map(input => console.log(token(input)))
-
+export default token
+export {
+  Combinator,
+  Combinators,
+}

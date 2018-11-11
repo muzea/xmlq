@@ -5,8 +5,17 @@
   "main": "index.js",
   "author": "woodenfish <mr.muzea@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc -p . --outDir dist/",
+    "run": "node dist/index.js"
+  },
   "dependencies": {
     "lodash": "^4.17.11",
     "xml-js": "^1.6.8"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.117",
+    "@types/node": "8",
+    "typescript": "^3.1.6"
   }
 }

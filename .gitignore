@@ -1,2 +1,5 @@
+yarn-error.log
+yarn.lock
 node_modules
 .git
+dist/
